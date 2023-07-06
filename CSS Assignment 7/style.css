@@ -1,0 +1,109 @@
+@font-face {
+    font-family: lobster;
+    src: url(Fonts/Lobster-Regular.ttf);
+}
+@font-face {
+    font-family:raleway ;
+    src: url(Fonts/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: abril;
+    src: url(Fonts/AbrilFatface-Regular.ttf);
+}
+@font-face {
+    font-family: belanosima;
+    src: url(Fonts/Belanosima-Regular.ttf);
+}
+@font-face {
+    font-family: caveat;
+    src: url(Fonts/Caveat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: fasthand;
+    src: url(Fonts/Fasthand-Regular.ttf);
+}
+@font-face {
+    font-family: indieflower;
+    src: url(Fonts/IndieFlower-Regular.ttf);
+}
+@font-face {
+    font-family: kablammo;
+    src: url(Fonts/Kablammo-Regular-VariableFont_MORF.ttf);
+}
+@font-face {
+    font-family: pacifico;
+    src: url(Fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: marker;
+    src: url(Fonts/PermanentMarker-Regular.ttf);
+}
+@font-face {
+    font-family: YsabeauSC;
+    src: url(Fonts/YsabeauSC-VariableFont_wght.ttf);
+}
+.background {
+    position: relative;
+    height: auto;
+    width: 800px;
+    background-color: blue;
+   
+}
+
+
+.background img {
+    width: 100%;
+    display: block;
+}
+
+
+
+.heading{
+    position: absolute;
+    top: 65px;
+    left: 220px;
+}
+
+.text{
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    /* font-weight: bold; */
+}
+
+.heading{
+    font-family: YsabeauSC;
+}
+
+.p1a{
+    font-family:lobster;
+}
+.p1b{
+    font-family: raleway;
+}
+.p2a{
+    font-family: abril;
+}
+.p2b{
+    font-family: belanosima;
+}
+.p3a{
+    font-family: caveat;
+    font-size:larger;
+}
+.p3b{
+    font-family: fasthand;
+    font-size:large;
+}
+.p4a{
+    font-family: indieflower;
+}
+.p4b{
+    font-family: kablammo;
+}
+.p5a{
+    font-family:pacifico;
+}
+.p5b{
+    font-family: marker;
+}
