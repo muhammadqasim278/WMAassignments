@@ -1,45 +1,56 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.assignment1, .index1, .index2, .index3, .index4, .index5{
-    background-color: rgb(107, 180, 240);
+.assignment1,
+.index1,
+.index2,
+.index3,
+.index4,
+.index5 {
+  background-color: rgb(107, 180, 240);
 }
 
-
-.assignment2{
-    background-color:burlywood ;
+.assignment2 {
+  background-color: burlywood;
 }
 
-.assignment3{
-    background-color: cadetblue;
+.assignment3 {
+  background-color: cadetblue;
 }
 
-.assignment4{
-    background-color: aqua;
+.assignment4 {
+  background-color: aqua;
 }
 
-.assignment5{
-    background-color:darkgray ;
+.assignment5 {
+  background-color: darkgray;
 }
 
-.assignment6{
-    background-color:rgb(38, 138, 238);
+.assignment6 {
+  /* background-color: rgb(162, 218, 32); */
+  background-color: blueviolet;
 }
-
-.buttons button{
-    width: 200px;
-    height: 50px;
-    border-radius: 50px;
-    border-color: white;
+h1 {
+  color: white;
+  text-align: center;
+  font-family: sofia;
+  font-size: 50px;
 }
-h1{
-    color: white;
+h1 > span {
+  font-size: 80px;
 }
-
-button{
-    color: black;
-    font-weight: bold;
+.cards {
+  width: 90%;
+  height: 1600px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  background-color: rgb(125, 203, 240);
+  margin-bottom: 70px;
+  border-radius: 0 25px 0 25px;
 }
-
