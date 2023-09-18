@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator by Qasim</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="text-center">Welcome to Calculate me!</h1>
+    <div class="container mx-auto flex flex-col item-center bg-red style">
+      <div class="row">
+        <input type="text" class="input" id="screen" placeholder="0" disabled dir="rtl" />
+      </div>
+      <div class="row">
+        <button class="button bg-color-yellow" onclick="clearScreen()">AC</button>
+        <button class="button bg-color-yellow" onclick="singleDelete()">DEL</button>
+        <button class="button bg-color-yellow" onclick="addToDisplay('%')">%</button>
+        <button class="button bg-color-yellow" onclick="addToDisplay('/')">/</button>
+      </div>
+      <div class="row">
+        <button class="button" onclick="addToDisplay('7')">7</button>
+        <button class="button" onclick="addToDisplay('8')">8</button>
+        <button class="button" onclick="addToDisplay('9')">9</button>
+        <button class="button bg-color-yellow" onclick="addToDisplay('*')">x</button>
+      </div>
+      <div class="row">
+        <button class="button" onclick="addToDisplay('4')">4</button>
+        <button class="button" onclick="addToDisplay('5')">5</button>
+        <button class="button" onclick="addToDisplay('6')">6</button>
+        <button class="button bg-color-yellow" onclick="addToDisplay('-')">-</button>
+      </div>
+      <div class="container mx-auto flex item-center bottom">
+        <div class="left">
+          <div class="row" style="margin-bottom: 16px">
+            <button class="button" onclick="addToDisplay('1')">1</button>
+            <button class="button" onclick="addToDisplay('2')">2</button>
+            <button class="button" onclick="addToDisplay('3')">3</button>
+          </div>
+          <div class="row" style="margin-bottom: 8px">
+            <button class="button" onclick="addToDisplay('0')">0</button>
+            <button class="button" onclick="addToDisplay('.')">.</button>
+            <button class="button" onclick="calculate()">=</button>
+          </div>
+        </div>
+        <div class="righ">
+          <button class="button bg-color-yellow" style="height: 120px; margin-left: 6px"  onclick="addToDisplay('+')">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
