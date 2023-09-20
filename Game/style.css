@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.dino{
+    background-image: url(spidey-scratchin.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 160px;
+    height: 250px;
+    position: absolute;
+    bottom: 5px;
+    left: 52px;
+}
+span{
+    font-weight: bold;
+}
+
+.animateUp{
+    overflow:visible;
+    background-image: url(spider-sting.gif);
+    animation: dinoUp 3s linear;
+}
+.animateMove{
+    background-image: url(spidey-walk1.gif);
+    width: 200px;
+    height: 200px;
+}
+.animateAttack{
+    background-image: url(spidet-webball.gif);
+    width: 600px;
+    height: 250px;
+    bottom: 10px;
+}
+.animateTop{
+    background-image: url(m-spidey.gif);
+    top: 0;
+    height: 300px;
+}
+.animateDown{
+    background-image: url(spidey-crouch.gif);
+    width: 260px;
+    height: 135px;
+    bottom: 20px;
+}
+.animateFlip{
+    background-image: url(spidey-flipkick-fk.gif);
+    width: 300px;
+}
+@keyframes dinoUp {
+    0%{
+        bottom: 0;
+        width: 300px;
+    }
+    50%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 0;
+        width: 300px;
+    }
+} 
