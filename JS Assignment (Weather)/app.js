@@ -11,22 +11,22 @@ document.querySelector("#btn").addEventListener("click", () => {
       
       var imgOne = document.getElementById("imgOne");
       if (input.value == "") {
-        imgOne.src = "/images/404.png";
+        imgOne.src = "images/404.png";
       }
       else if (data.weather[0].main === "Smoke") {
-        imgOne.src = "/images/mist.png";
+        imgOne.src = "images/mist.png";
       } else if (data.weather[0].main === "Clear") {
-        imgOne.src = "/images/clear.png";
+        imgOne.src = "images/clear.png";
       } else if (data.weather[0].main === "Clouds") {
-        imgOne.src = "/images/cloud.png";
+        imgOne.src = "images/cloud.png";
       } else if (data.weather[0].main === "Snow") {
-        imgOne.src = "/images/snow.png";
+        imgOne.src = "images/snow.png";
       } else if (data.weather[0].main === "Rain") {
-        imgOne.src = "/images/rain.png";
+        imgOne.src = "images/rain.png";
       } else if (data.weather[0].main === "Mist") {
-        imgOne.src = "/images/mist.png";
+        imgOne.src = "images/mist.png";
       }else if (data.weather[0].main === "Haze") {
-        imgOne.src = "/images/haze.png";
+        imgOne.src = "images/haze.png";
       }
      
 
