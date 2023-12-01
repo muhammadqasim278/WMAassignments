@@ -34,29 +34,30 @@ function idate() {
 
   var iyear = parseInt(new Intl.DateTimeFormat('fr-TN-u-ca-islamic', { year: 'numeric' }).format(Date.now()));
 
-  document.getElementById("idate").innerHTML = idate - 2;
+  document.getElementById("idate").innerHTML = idate - 1;
   document.getElementById("idetailDate").innerHTML = imonth + ", " + iyear;
 }
 setInterval(idate, 1000);
 idate();
 
 function date() {
-  var day = ['Sun', 'Mon', 'Tue', 'Wed','Thurs', 'Fri', 'Sat']
+  var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat']
   var now = new Date();
   var cdate = now.getDate();
   var cmonth = now.getMonth() + 1;
   var cyear = now.getFullYear();
-  
+
 
   cdate = cdate < 10 ? '0' + cdate : cdate;
   cmonth = cmonth < 10 ? '0' + cmonth : cmonth;
 
-  document.getElementById("date").innerHTML = day[now.getDay()]+" "+cdate + "-" + cmonth + "-" + cyear;
+  document.getElementById("date").innerHTML = day[now.getDay()] + " " + cdate + "-" + cmonth + "-" + cyear;
 }
 setInterval(date, 1000);
 date();
 
-function Namaz() {
+function namazName() {
+  var nowName, upcoming, untime;
   var fajar = (5 * 60) + 39;
   var zohor = (12 * 60) + 21;
   var asar = (16 * 60) + 6;
@@ -65,33 +66,45 @@ function Namaz() {
 
   var date = new Date();
   var currentMinutes = ((date.getHours()) * 60) + date.getMinutes();
-  if (currentMinutes >= fajar && currentMinutes <= zohor - 1) {
-    var Namaz = ['FAJAR', 'ZOHOR', '12:21 PM'];
-  } else if (currentMinutes >= zohor && currentMinutes <= asar - 1) {
-    if(date.getDay() == 5){
-      var Namaz = ['JUMMA', 'ASAR', '04:06 PM'];
-    }else{
-      var Namaz = ['ZOHOR', 'ASAR', '04:06 PM'];
-    }
-   
-  } else if (currentMinutes >= asar && currentMinutes <= maghrib - 1) {
-    var Namaz = ['ASAR', 'MAGHRIB', '05:42 PM'];
-  } else if (currentMinutes >= maghrib && currentMinutes <= isha - 1) {
-    var Namaz = ['MAGHRIB', 'ISHA', '07:03 PM'];
-  } else if (currentMinutes >= isha && currentMinutes <= fajar - 1) {
-    var Namaz = ['ISHA', 'FAJAR', '05:39 AM'];
-  }
 
-  document.getElementById("now").innerHTML = Namaz[0];
-  document.getElementById("upcoming").innerHTML = Namaz[1];
-  document.getElementById("untime").innerHTML = Namaz[2];
-  
+  console.log(currentMinutes, fajar, zohor, asar, maghrib, isha);
+  if (currentMinutes >= fajar && currentMinutes < zohor) {
+    nowName = "FAJAR";
+    upcoming = 'ZOHOR';
+    untime = '12:21 PM';
+  } else if (currentMinutes >= zohor && currentMinutes < asar) {
+    if (date.getDay() == 5) {
+      nowName = "JUMMA";
+      upcoming = 'ASAR';
+      untime = '04:06 PM';
+    } else {
+      nowName = "ZOHOR";
+      upcoming = 'ASAR';
+      untime = '04:06 PM';
+    }
+  } else if (currentMinutes >= asar && currentMinutes < maghrib) {
+    nowName = "ASAR";
+    upcoming = 'MAGHRIB';
+    untime = '05:42 PM';
+  } else if (currentMinutes >= maghrib && currentMinutes < isha) {
+    nowName = "MAGHRIB";
+    upcoming = 'ISHA';
+    untime = '07:03 PM';
+  } else if ((currentMinutes >= isha && currentMinutes <= 1440 ) || currentMinutes < fajar) {
+    nowName = "ISHA";
+    upcoming = "FAJAR";
+    untime = "05:39 AM";
+  }
+  console.log(nowName, upcoming, untime)
+
+  document.getElementById("now").innerHTML = nowName;
+  document.getElementById("upcoming").innerHTML = upcoming;
+  document.getElementById("untime").innerHTML =  untime;
 
 }
-setInterval(Namaz, 1000);
-Namaz();
-var switch1 = document.getElementById("switch1");
-console.log(switch1.checked)
+setInterval(namazName, 1000);
+namazName();
+
 
 
 
