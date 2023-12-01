@@ -18,8 +18,6 @@ function updateClock() {
   document.getElementById("hour").innerHTML = hours + ":";
   document.getElementById("mint").innerHTML = minutes + ":";
   document.getElementById("sec").innerHTML = seconds + " " + noon;
-
-  // document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
 }
 setInterval(updateClock, 1000);
 updateClock();
@@ -57,7 +55,7 @@ setInterval(date, 1000);
 date();
 
 function namazName() {
-  var nowName, upcoming, untime;
+  var namaz;
   var fajar = (5 * 60) + 39;
   var zohor = (12 * 60) + 21;
   var asar = (16 * 60) + 6;
@@ -67,40 +65,27 @@ function namazName() {
   var date = new Date();
   var currentMinutes = ((date.getHours()) * 60) + date.getMinutes();
 
-  console.log(currentMinutes, fajar, zohor, asar, maghrib, isha);
   if (currentMinutes >= fajar && currentMinutes < zohor) {
-    nowName = "FAJAR";
-    upcoming = 'ZOHOR';
-    untime = '12:21 PM';
-  } else if (currentMinutes >= zohor && currentMinutes < asar) {
-    if (date.getDay() == 5) {
-      nowName = "JUMMA";
-      upcoming = 'ASAR';
-      untime = '04:06 PM';
-    } else {
-      nowName = "ZOHOR";
-      upcoming = 'ASAR';
-      untime = '04:06 PM';
-    }
-  } else if (currentMinutes >= asar && currentMinutes < maghrib) {
-    nowName = "ASAR";
-    upcoming = 'MAGHRIB';
-    untime = '05:42 PM';
-  } else if (currentMinutes >= maghrib && currentMinutes < isha) {
-    nowName = "MAGHRIB";
-    upcoming = 'ISHA';
-    untime = '07:03 PM';
-  } else if ((currentMinutes >= isha && currentMinutes <= 1440 ) || currentMinutes < fajar) {
-    nowName = "ISHA";
-    upcoming = "FAJAR";
-    untime = "05:39 AM";
+    namaz = ["FAJAR","ZOHOR","12:21 PM"];
+  } 
+  else if (currentMinutes >= zohor && currentMinutes < asar) {
+    if (date.getDay() == 5) {namaz = ["JUMMA","ASAR","04:06 PM"];} 
+
+    else { namaz = ["ZOHOR","ASAR","04:06 PM"];}
+  } 
+  else if (currentMinutes >= asar && currentMinutes < maghrib) {
+    namaz = ["ASAR","MAGHRIB","05:42 PM"];
+  } 
+  else if (currentMinutes >= maghrib && currentMinutes < isha) {
+    namaz = ["MAGHRIB","ISHA","07:03 PM"];
+  } 
+  else if ((currentMinutes >= isha && currentMinutes <= 1440 ) || currentMinutes < fajar) {
+    namaz = ["ISHA","FAJAR","05:39 AM"];
   }
-  console.log(nowName, upcoming, untime)
-
-  document.getElementById("now").innerHTML = nowName;
-  document.getElementById("upcoming").innerHTML = upcoming;
-  document.getElementById("untime").innerHTML =  untime;
-
+  
+  document.getElementById("now").innerHTML = namaz[0];
+  document.getElementById("upcoming").innerHTML = namaz[1];
+  document.getElementById("untime").innerHTML =  namaz[2];
 }
 setInterval(namazName, 1000);
 namazName();

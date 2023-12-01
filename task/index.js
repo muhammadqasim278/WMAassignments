@@ -195,35 +195,140 @@
 // }
 // console.log(str);
 
-// anagrams
-function sorting(characters) {
-    for (let i = 0; i < characters.length - 1; i++) {
-        for (let j = 0; j < characters.length - i - 1; j++) {
-            if (characters[j] > characters[j + 1]) {
-                // Swap the characters
-                const temp = characters[j];
-                characters[j] = characters[j + 1];
-                characters[j + 1] = temp;
-            }
-        }
-    }
-    return characters;
-}
-var input1 = prompt("Enter the 1st word:");
-input1 = sorting(input1.split("")).join("");
-var input2 = prompt("Enter the 2nd word:");
-input2 = sorting(input2.split("")).join("");
-if(input1 === input2){
-    document.write("The giving words are Anagrams!");''
-}
-else{
-    document.write("Not a Anagrams.");
-}
+// // anagrams
+// function sorting(characters) {
+//     for (let i = 0; i < characters.length - 1; i++) {
+//         for (let j = 0; j < characters.length - i - 1; j++) {
+//             if (characters[j] > characters[j + 1]) {
+//                 // Swap the characters
+//                 const temp = characters[j];
+//                 characters[j] = characters[j + 1];
+//                 characters[j + 1] = temp;
+//             }
+//         }
+//     }
+//     return characters;
+// }
+// var input1 = prompt("Enter the 1st word:");
+// input1 = sorting(input1.split("")).join("");
+// var input2 = prompt("Enter the 2nd word:");
+// input2 = sorting(input2.split("")).join("");
+// if(input1 === input2){
+//     document.write("The giving words are Anagrams!");
+// }
+// else{
+//     document.write("Not a Anagrams.");
+// }
+
+// function sum(w,x,y,z){
+//     return w+x+y+z;
+
+// }
+
+// // console.log(sum(2),(2),(2),(2))
+
+// // var x =10;
+// function print(){
+//     // console.log(x);
+//     var x = 20;
+// }
+// print();
+// document.write(x);
 
 
 
 
+// function Student(a,b){
+//     this.firstName = a;
+//     this.lastName = b;
+// }
+
+// var result = new Student("Abdul","Basit");
+
+// console.log(result.firstName+" "+result.lastName);
+
+
+// var obj={
+//     firstName: "Muhammad",
+//     lastName: "Qasim",
+//     fullName: function(){
+//         return this.firstName+" "+this.lastName;
+//     }
+// }
+// console.log(obj.fullName());
 
 
 
+//// find location sing opencage api
 
+// <!-- <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8">
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//   <title>City and County Finder</title>
+//   <style>
+//     body {
+//       font-family: Arial, sans-serif;
+//       text-align: center;
+//       margin: 50px;
+//     }
+//   </style>
+// </head>
+// <body>
+
+//   <h1>City and County Finder</h1>
+//   <p id="location">Click the button to find your city and county.</p>
+
+//   <script>
+//     function getLocation() {
+//       if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition, showError);
+//       } else {
+//         document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+//       }
+//     }
+
+//     function showPosition(position) {
+//       const latitude = position.coords.latitude;
+//       const longitude = position.coords.longitude;
+
+//       // Use OpenCage Geocoding API to get city and county information
+//       const apiKey = 'dca79204dd1041fd994f149745930d02';
+//       const apiEndpoint = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude}+${longitude}&pretty=1`;
+
+//       console.log(apiEndpoint);
+//       fetch(apiEndpoint)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//           const city = data.results[0].components.county;
+//           const county = data.results[0].components.country;
+
+//           document.getElementById("location").innerHTML = `Your city is ${city} and your county is ${county}.`;
+//         })
+//         .catch(error => console.error('Error:', error));
+//     }
+
+//     function showError(error) {
+//       switch (error.code) {
+//         case error.PERMISSION_DENIED:
+//           document.getElementById("location").innerHTML = "User denied the request for geolocation.";
+//           break;
+//         case error.POSITION_UNAVAILABLE:
+//           document.getElementById("location").innerHTML = "Location information is unavailable.";
+//           break;
+//         case error.TIMEOUT:
+//           document.getElementById("location").innerHTML = "The request to get user location timed out.";
+//           break;
+//         case error.UNKNOWN_ERROR:
+//           document.getElementById("location").innerHTML = "An unknown error occurred.";
+//           break;
+//       }
+//     }
+//   </script>
+
+//   <button onclick="getLocation()">Get Location</button>
+
+// </body>
+// </html> --></head>
