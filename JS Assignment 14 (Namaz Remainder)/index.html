@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- <img src="images/background6.avif"> -->
+    <div class="right">
+      <div class="idate">
+        <p id="idate">0</p>
+      </div>
+      <div class="idetailDate">
+        <p id="idetailDate">Muharram, 0000</p>
+      </div>
+    </div>
+
+
+    <div class="center">
+      <div id="clock" class="clock">
+        <span id="hour">00</span>
+        <span id="mint">00</span>
+        <span id="sec">00</span>
+      </div>
+      <div class="date">
+        <span id="date">00-00-00</span>
+      </div>
+    </div>
+
+
+    <div class="left">
+      <div class="now">
+        <p class="nowtop">Now</p>
+        <p class="namaz" id="now">NAMAZ</p>
+      </div>
+      <div class="upcoming">
+        <p class="upcomingtop">upcoming</p>
+        <p class="namaz" id="upcoming">NAMAZ</p>
+        <span id="untime">00:00 AM</span>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="fajar namaztime"><span>FAJAR</span>
+        <p>05:39 AM</p>
+        <div class="togle">
+          <input type="checkbox" id="switch1" class="checkbox" value="1" />
+          <label for="switch1" class="toggle">
+            <p>ON OFF</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="zohor namaztime"><span>ZOHOR</span>
+        <p>12:21 PM</p>
+        <div class="togle">
+          <input type="checkbox" id="switch2" class="checkbox" />
+          <label for="switch2" class="toggle">
+            <p>ON  OFF</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="asar namaztime"><span>ASAR</span>
+        <p>04:06 PM</p>
+        <div class="togle">
+          <input type="checkbox" id="switch3" class="checkbox" value="3" />
+          <label for="switch3" class="toggle">
+            <p>ON OFF</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="maghrib namaztime"><span>MAGHRIB</span>
+        <p>05:42 PM</p>
+        <div class="togle">
+          <input type="checkbox" id="switch4" class="checkbox" />
+          <label for="switch4" class="toggle">
+            <p>ON OFF</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="isha namaztime"><span>ISHA</span>
+        <p>07:03 PM</p>
+        <div class="togle">
+          <input type="checkbox" id="switch5" class="checkbox" />
+          <label for="switch5" class="toggle">
+            <p>ON OFF</p>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City and County Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>City and County Finder</h1>
+  <p id="location">Click the button to find your city and county.</p>
+
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+
+      // Use OpenCage Geocoding API to get city and county information
+      const apiKey = 'dca79204dd1041fd994f149745930d02';
+      const apiEndpoint = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude}+${longitude}&pretty=1`;
+
+      console.log(apiEndpoint);
+      fetch(apiEndpoint)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+          const city = data.results[0].components.county;
+          const county = data.results[0].components.country;
+
+          document.getElementById("location").innerHTML = `Your city is ${city} and your county is ${county}.`;
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          document.getElementById("location").innerHTML = "User denied the request for geolocation.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          document.getElementById("location").innerHTML = "Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          document.getElementById("location").innerHTML = "The request to get user location timed out.";
+          break;
+        case error.UNKNOWN_ERROR:
+          document.getElementById("location").innerHTML = "An unknown error occurred.";
+          break;
+      }
+    }
+  </script>
+
+  <button onclick="getLocation()">Get Location</button>
+
+</body>
+</html> -->

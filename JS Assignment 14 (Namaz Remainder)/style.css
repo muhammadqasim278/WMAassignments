@@ -1,0 +1,272 @@
+@font-face {
+    font-family: digital;
+    src: url(fonts/digital-7.ttf);
+}
+@font-face {
+    font-family: sofia;
+    src: url(fonts/Sofia\ Pro\ Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 700px;
+    background-image: url(images/background1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+.right{
+    height: 150px;
+    width: 300px;
+    /* background-color: orange; */
+    right: 0;
+    position: absolute;
+    top: 150px;
+    font-family: sofia;
+    /* color: white; */
+    backdrop-filter: blur(5px);
+}
+.idate{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.idate p{
+    right: 0;
+    font-size: 60px;
+    position: absolute;
+    padding-right: 30px;
+}
+
+.idetailDate{
+    width: 100%;
+    height: 40px;
+}
+.idetailDate p{
+    right: 0;
+    position: absolute;
+    font-size: 25px;
+    padding-right: 30px;
+}
+
+
+.center{
+    height: 100px;
+    width: 350px;
+    /* background-color: orange; */
+    position: relative;
+    top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    /* color: white; */
+    backdrop-filter: blur(5px);
+}
+.clock span, 
+.date span{
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: digital;
+}
+
+.left{
+    height: 220px;
+    width: 200px;
+    /* background-color: orange; */
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 130px;
+    font-family: sofia;
+    backdrop-filter: blur(5px);
+    /* color: white; */
+}
+
+.now{
+    width: 100%;
+    height: 100px;
+    /* background-color: aqua; */
+}
+.now .nowtop{
+    left: 0;
+    position: absolute;
+    font-size: 25px;
+    padding-left: 30px;
+}
+.now .namaz{
+    left: 0;
+    font-size: 40px;
+    position: absolute;
+    padding-left: 30px;
+    top: 30px;
+    font-weight: bolder;
+}
+
+.upcoming{
+    width: 100%;
+    height: 120px;
+    /* background-color:blueviolet; */
+}
+ .upcoming .upcomingtop{
+    left: 0;
+    position: absolute;
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+.upcoming .namaz{
+    left: 0;
+    font-size: 40px;
+    position: relative;
+    padding-left: 30px;
+    top: 30px;
+    font-weight: bolder;
+}
+
+.upcoming span{
+    font-family: digital;
+    left: 0;
+    position: relative;
+    font-size: 30px;
+    font-weight:bold;
+    padding-left: 30px;
+    top: 32px
+} 
+
+
+.bottom{
+    height: 330px;
+    width: 100%;
+    position: absolute; 
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+
+.namaztime{
+    height: 80px;
+    width: 350px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+    backdrop-filter: blur(5px);
+    color: white;
+    font-family: sofia;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.fajar{
+    background-image: url(images/fajar.png);
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+.zohor{
+    background-image: url(images/zohor.png);
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+.asar{
+    background-image: url(images/asar.png);
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+.maghrib{
+    background-image: url(images/maghrib.png);
+    background-size: cover;
+    background-position: bottom;
+}
+.isha{
+    background-image: url(images/isha.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+.fajar p,.zohor p, .asar p, .maghrib p, .isha p{
+    right: 0;
+    position: absolute;
+    font-family: digital;
+    padding-right: 65px;
+    font-size: 40px;
+}
+
+
+.togle{
+    position: absolute;
+    right: 0;
+    right: 15px;
+    align-items: center;
+    display: flex;
+}
+
+/* toggle in label designing */
+.toggle {
+    position : relative ;
+    display : inline-block;
+    width : 40px;
+    height : 15px;
+    background-color: red;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+       
+/* After slide changes */
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: gray;
+    bottom: -3px;
+    /* left: -3; */
+    right: 19px;
+    transition:  all 0.5s;
+    
+}
+       
+/* Toggle text */
+.toggle p {
+    width: 45px;
+    font-family: sofia;
+    font-weight: bold;
+    font-size: 10px;
+    left: 2px;
+    bottom: 1px;
+    color: black;
+}
+       
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+    left : 19px; 
+}
+       
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+    background-color: green;
+}
+       
+/* Checkbox vanished */
+.checkbox { 
+    display : none;
+}
