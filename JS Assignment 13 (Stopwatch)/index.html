@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="head">
+            <div class="timer" id="selectTimer" onclick="selectTimer()" >
+               <img src="images/timer.svg" class="imageSize" id="timerimg">
+                <p id="timerp"> TIMER</p>
+            </div>
+            <div class="stopwatch" id="selectStopwatch" onclick="selectStopwatch()">
+                <img src="images/stopwatch.svg" class="imageSize" id="stopwatchimg">
+                <p id="stopwatchp"> STOPWATCH</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="timer" id="timer">
+                <span class="sec" id="timerh"></span>
+                <span class="s" id="th"></span>
+                <span class="sec" id="timerm">5</span>
+                <span class="s">m</span>
+                <span class="sec" id="timers">00</span>
+                <span class="s">s</span>
+            </div>
+            <div class="stopwatch" id="stopwatch">
+                <span class="sec" id="hour"></span>
+                <span class="s" id="h"></span>
+                <span class="sec" id="min"></span>
+                <span class="s" id="m"></span>
+                <span class="sec" id="sec">0</span>
+                <span class="s">s</span>
+                <span class="csec" id="csec">00</span>
+            </div>
+        </div>
+
+        <div class="foot">
+            <div class="btn">
+                <button class="start" onclick="startStop()" id="start">START</button>
+                <button class="reset" onclick="reset()" id="reset">RESET</button>
+            </div>
+            <div class="img">
+                <img src="images/sound.png" alt="" class="sound" id="sound">
+                <img src="images/zoom.png" alt="" class="zoom">
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>
